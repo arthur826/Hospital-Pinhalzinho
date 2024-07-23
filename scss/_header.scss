@@ -1,0 +1,246 @@
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2023;
+  padding-top: 10px;
+  padding-bottom: 1rem;
+  background-color: #fff;
+  .container {
+    display: flex;
+    .logo-header {
+      width: 100%;
+      max-width: 21rem;
+      transition: all 0.5s ease;
+    }
+    nav {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      .links-de-contato-do-header {
+        width: 100%;
+        max-width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 5rem;
+        padding-bottom: 13px;
+        border-bottom: 1px solid #9dd3b5;
+        .link-de-contato {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          .icone {
+            width: 100%;
+            max-width: 14px;
+          }
+        }
+        .links-redes-sociais-header {
+          display: flex;
+          align-items: center;
+          margin-left: 7rem;
+          gap: 14px;
+        }
+      }
+      .links-das-paginas {
+        display: flex;
+        align-items: center;
+        gap: 7.3rem;
+        padding-top: 2.8rem;
+        li {
+          color: #000;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: normal;
+          font-family: "Open Sans";
+          transition: all 0.5s ease;
+          a {
+            color: #000;
+            transition: all 0.5s ease;
+          }
+          &:hover {
+            a {
+              color: #c4e5cf;
+            }
+          }
+        }
+      }
+      .btn-menu-mobile {
+        display: none;
+      }
+    }
+  }
+
+  @include responsive(1000px) {
+    .container {
+      nav {
+        justify-content: center;
+        .links-de-contato-do-header {
+          display: none;
+        }
+        .links-das-paginas {
+          display: none;
+        }
+        .btn-menu-mobile {
+          width: 100%;
+          max-width: 3.2rem;
+          display: block;
+        }
+      }
+    }
+  }
+  @include responsive(440px) {
+    .container {
+      .logo-header {
+        width: 100%;
+        max-width: 12rem;
+      }
+      nav {
+        .btn-menu-mobile {
+          width: 100%;
+          max-width: 2.4rem;
+        }
+      }
+    }
+  }
+}
+
+.header-scrolled {
+  header {
+    .container {
+      .logo-header {
+        max-width: 15rem;
+      }
+      nav {
+        .links-de-contato-do-header {
+          .link-de-contato {
+            .texto-links-de-contato-header {
+              font-size: 10px;
+            }
+          }
+        }
+        .links-das-paginas {
+          padding-top: 1.4rem;
+          li {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(440px) {
+    header {
+      .container {
+        .logo-header {
+          max-width: 12rem;
+        }
+      }
+    }
+  }
+}
+
+.menu-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2024;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+  }
+  aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 3rem;
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+    overflow: auto;
+    .logo-header {
+      display: flex;
+      width: 100%;
+      max-width: 18rem;
+      margin-bottom: 4rem;
+    }
+    nav {
+      .links-de-contato-do-header {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        margin-bottom: 4rem;
+        .link-de-contato {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+        .links-redes-sociais-header {
+          .links-redes-sociais {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+        }
+      }
+      .links-das-paginas {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        li {
+          color: #000;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: normal;
+          font-family: "Open Sans";
+          transition: all 0.5s ease;
+          a {
+            color: #000;
+            transition: all 0.5s ease;
+          }
+          &:hover {
+            a {
+              color: #c4e5cf;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(834px) {
+    aside {
+      width: 40%;
+    }
+  }
+  @include responsive(500px) {
+    aside {
+      width: 65%;
+    }
+  }
+}
+
+.menu-opened {
+  overflow: hidden;
+  .menu-mobile {
+    opacity: 1;
+    pointer-events: all;
+    aside {
+      transform: translateX(0%);
+    }
+  }
+}

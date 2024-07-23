@@ -1,0 +1,200 @@
+footer {
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1.2rem;
+    .top {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(157, 211, 175, 0.3);
+      padding-bottom: 4.1rem;
+      .endereco-e-contato {
+        display: flex;
+        flex-direction: column;
+        .logo-footer {
+          width: 100%;
+          max-width: 23rem;
+          margin-bottom: 1.8rem;
+        }
+      }
+      .links-institucionais {
+        display: flex;
+        flex-direction: column;
+        padding-top: 6rem;
+        h4 {
+          color: #48887b;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 120%; /* 19.2px */
+          margin-bottom: 2.2rem;
+        }
+        li {
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 200%; /* 28px */
+          transition: all 0.5s ease;
+          a {
+            color: #3f3f3f;
+            transition: all 0.5s ease;
+          }
+          &:hover {
+            a {
+              color: #094f57;
+            }
+          }
+        }
+      }
+      .links-uteis {
+        display: flex;
+        flex-direction: column;
+        padding-top: 6rem;
+        h4 {
+          color: #48887b;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 120%; /* 19.2px */
+          margin-bottom: 2.2rem;
+        }
+        li {
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 200%; /* 28px */
+          transition: all 0.5s ease;
+          a {
+            color: #3f3f3f;
+            transition: all 0.5s ease;
+          }
+          &:hover {
+            a {
+              color: #094f57;
+            }
+          }
+        }
+      }
+      .links-redes-sociais-footer {
+        display: flex;
+        flex-direction: column;
+        padding-top: 6rem;
+        h4 {
+          color: #48887b;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 120%; /* 19.2px */
+          margin-bottom: 2.2rem;
+        }
+        .logos-redes-sociais {
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+          a {
+            width: 100%;
+            max-width: 3rem;
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .bottom {
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 2.8rem;
+      padding-bottom: 3.4rem;
+      .texto-copyright {
+        color: #3f3f3f;
+        font-weight: 400;
+      }
+      .btn-return-to-top {
+        position: absolute;
+        left: 47.8%;
+        top: -33%;
+        width: 100%;
+        max-width: 5.4rem;
+        height: 5.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        background: linear-gradient(90deg, #48887b 0%, #9dd3af 100%);
+      }
+      .link-do-dev {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        .texto-desenvolvedor {
+          color: #3f3f3f;
+          font-family: "Open Sans";
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 120%;
+        }
+        .logo-jpx {
+          width: 100%;
+          max-width: 3.2rem;
+          img {
+            transition: all 2s ease;
+          }
+        }
+        &:hover {
+          .logo-jpx {
+            img {
+              filter: hue-rotate(323deg);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(440px) {
+    .container {
+      .top {
+        flex-direction: column;
+        align-items: center;
+        .endereco-e-contato {
+          text-align: center;
+          align-items: center;
+          .logo-footer {
+            max-width: 18rem;
+          }
+        }
+        .links-institucionais {
+          text-align: center;
+          align-items: center;
+        }
+        .links-uteis {
+          text-align: center;
+          align-items: center;
+        }
+        .links-redes-sociais-footer {
+          text-align: center;
+          align-items: center;
+        }
+      }
+      .bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+        .texto-copyright {
+          font-size: 12px;
+        }
+        .btn-return-to-top {
+          top: -19%;
+          max-width: 4.4rem;
+          height: 4.4rem;
+        }
+        .link-do-dev {
+          .texto-desenvolvedor {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

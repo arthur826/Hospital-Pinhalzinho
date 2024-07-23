@@ -1,0 +1,586 @@
+.card-especialidade {
+  width: 100%;
+  height: 21rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  border-radius: 20px;
+  background: #fff;
+  .icone-card {
+    width: 100%;
+    max-width: 3.9rem;
+    margin-bottom: 1.6rem;
+  }
+  h3 {
+    color: #5e968b;
+    font-family: Montserrat;
+    font-size: 20px;
+    line-height: 112%;
+    margin-bottom: 2.2rem;
+  }
+  p {
+    color: #4b5563;
+    font-size: 13px;
+    font-weight: 400;
+  }
+}
+
+.s-convenios {
+  padding-top: 2.2rem;
+  padding-bottom: 2.2rem;
+  .container {
+    display: flex;
+    align-items: center;
+    p {
+      color: #48887b;
+      font-family: Montserrat;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding-right: 4rem;
+    }
+    .slide-convenios {
+      width: 100%;
+      max-width: 75%;
+      overflow: hidden;
+      .conveniosSlides {
+        width: 100%;
+        .swiper-wrapper {
+          display: flex;
+          align-items: center;
+        }
+        .swiper-slide {
+          display: flex;
+          align-items: center;
+          justify-content: end;
+          .logo-do-convenio {
+            width: 100%;
+            max-width: 10.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(440px) {
+    .container {
+      p {
+        font-size: 12px;
+        padding-right: 2rem;
+      }
+    }
+  }
+}
+
+.card-noticia {
+  width: 100%;
+  max-width: 28rem;
+  height: 32rem;
+  .top {
+    padding-bottom: 1.6rem;
+    border-bottom: 1px solid #c4c4c4;
+    transition: all 0.5s ease;
+    .capa-da-noticia {
+      width: 100%;
+      height: 16.5rem;
+      border-radius: 2rem;
+      overflow: hidden;
+      margin-bottom: 1.7rem;
+      img {
+        width: 100%;
+        object-fit: cover;
+        transition: all 0.5s ease;
+      }
+    }
+    h3 {
+      color: #3f3f3f;
+      font-family: Montserrat;
+      font-size: 16px;
+      line-height: 112%; /* 17.92px */
+      letter-spacing: -1px;
+      margin-bottom: 2.2rem;
+    }
+    p {
+      font-size: 13px;
+      font-weight: 300;
+    }
+  }
+  .bottom {
+    display: flex;
+    align-items: center;
+    padding-top: 1.2rem;
+    gap: 10px;
+    .icon-relogio {
+      width: 100%;
+      max-width: 12px;
+    }
+    .text-data {
+      font-size: 10px;
+      font-weight: 300;
+    }
+  }
+
+  &:hover {
+    .top {
+      .capa-da-noticia {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+.card-videos {
+  width: 100%;
+  max-width: 28rem;
+  height: 28rem;
+  transition: all 0.5s ease-in;
+  .modal-video {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+    transform: translateX(-100%);
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+    .video-interno {
+      width: 100%;
+      max-width: 60%;
+      height: 65%;
+      border-radius: 3rem;
+      overflow: hidden;
+      z-index: 10;
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .open-modal-video {
+    display: flex;
+    z-index: 2024;
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .capa-do-video {
+    width: 100%;
+    height: 16.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    overflow: hidden;
+    margin-bottom: 1.7rem;
+    position: relative;
+    .imagem-do-video {
+      width: 100%;
+      object-fit: cover;
+      transition: all 0.5s ease-in;
+    }
+    .btn-click-video {
+      position: absolute;
+      cursor: pointer;
+    }
+  }
+  h3 {
+    color: #3f3f3f;
+    font-family: Montserrat;
+    font-size: 16px;
+    line-height: 112%; /* 17.92px */
+    letter-spacing: -1px;
+    margin-bottom: 2.2rem;
+  }
+  p {
+    font-size: 13px;
+    font-weight: 300;
+  }
+  &:hover {
+    .capa-do-video {
+      .imagem-do-video {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  @include responsive(840px) {
+    .modal-video {
+      .video-interno {
+        max-width: 80%;
+        height: 50%;
+        border-radius: 2rem;
+      }
+    }
+  }
+  @include responsive(440px) {
+    .modal-video {
+      .video-interno {
+        max-width: 100%;
+        height: 30%;
+        border-radius: 2rem;
+      }
+    }
+  }
+}
+
+.s-hero-interna {
+  position: relative;
+  width: 100%;
+  background: $bg-hero;
+  padding-top: 11rem;
+  overflow: hidden;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .titulo {
+      position: relative;
+      z-index: 10;
+      padding-bottom: 5rem;
+      .logo-hospital {
+        width: 100%;
+        max-width: 11rem;
+        margin-bottom: -6rem;
+      }
+      h2 {
+        color: #fff;
+        font-weight: 500;
+      }
+    }
+    .logo-do-centro {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      max-width: 26rem;
+      margin-bottom: -3rem;
+    }
+    .imagem-logo-da-direita {
+      width: 100%;
+      max-width: 45.6rem;
+      margin-right: -13rem;
+    }
+  }
+  .sobreposicao {
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: linear-gradient(
+      to right,
+      rgba(154, 212, 182, 0) 79.42%,
+      #77b19b 88.4%
+    );
+  }
+  @include responsive(1400px) {
+    background-size: cover;
+    .sobreposicao {
+      display: none;
+    }
+  }
+  @include responsive(1000px) {
+    .container {
+      .titulo {
+        h2 {
+          font-size: 32px;
+        }
+      }
+      .logo-do-centro {
+        max-width: 20rem;
+      }
+      .imagem-logo-da-direita {
+        max-width: 40.6rem;
+      }
+    }
+  }
+  @include responsive(875px) {
+    .container {
+      .titulo {
+        h2 {
+          font-size: 28px;
+        }
+      }
+      .logo-do-centro {
+        max-width: 12rem;
+      }
+      .imagem-logo-da-direita {
+        max-width: 35.6rem;
+      }
+    }
+  }
+  @include responsive(440px) {
+    padding-top: 8rem;
+    .container {
+      justify-content: center;
+      .titulo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 7rem;
+        .logo-hospital {
+          margin-bottom: -7rem;
+        }
+      }
+      .logo-do-centro {
+        display: none;
+      }
+      .imagem-logo-da-direita {
+        display: none;
+      }
+    }
+  }
+}
+
+.menu-de-navegacao {
+  width: 100%;
+  max-width: 28rem;
+  border-right: 1px solid #c4c4c4;
+  h3 {
+    color: #7e818a;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 120%; /* 16.8px */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding-bottom: 4.3rem;
+  }
+  .links-de-navegacao {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.4rem;
+    li {
+      width: 100%;
+      height: 3rem;
+      list-style: circle;
+      transition: all 0.8s ease;
+      .link-nav-interno {
+        color: #7e818a;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 112%; /* 20.16px */
+        letter-spacing: -1px;
+        transition: all 0.5s ease;
+      }
+      &:hover {
+        margin-left: 2rem;
+        .link-nav-interno {
+          color: #48887b;
+          font-size: 20px;
+          font-weight: 700;
+        }
+      }
+    }
+    .active-link-nav {
+      margin-left: 2rem;
+      color: #48887b !important;
+      font-size: 20px !important;
+      font-weight: 700 !important;
+    }
+  }
+  @include responsive(920px) {
+    max-width: 20rem;
+    .links-de-navegacao {
+      li {
+        .link-nav-interno {
+          font-size: 16px;
+        }
+      }
+      .active-link {
+        .link-nav-interno {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  @include responsive(700px) {
+    display: none;
+  }
+}
+.menu-de-navegacao-mobile {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2024;
+  display: none;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.12);
+    z-index: 0;
+  }
+  aside {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    padding-left: 1rem;
+    padding-right: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+    overflow: auto;
+    h3 {
+      color: #7e818a;
+      font-family: "Open Sans";
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 120%; /* 16.8px */
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding-bottom: 4.3rem;
+    }
+    .links-de-navegacao {
+      display: flex;
+      flex-direction: column;
+      row-gap: 2.4rem;
+      li {
+        width: 100%;
+        height: 3rem;
+        list-style: circle;
+        transition: all 0.8s ease;
+        .link-nav-interno {
+          color: #7e818a;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 112%; /* 20.16px */
+          letter-spacing: -1px;
+          transition: all 0.5s ease;
+        }
+        &:hover {
+          margin-left: 1.4rem;
+          .link-nav-interno {
+            color: #48887b;
+            font-size: 18px;
+            font-weight: 700;
+          }
+        }
+      }
+      .active-link {
+        margin-left: 2rem;
+        .link-nav-interno {
+          color: #48887b;
+          font-size: 18px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+.menu-de-navegacao-opened {
+  overflow: hidden;
+  display: block;
+  pointer-events: all;
+  aside {
+    transform: translateX(0%);
+  }
+}
+
+.card-especialidades {
+  width: 100%;
+  height: 22.8rem;
+  display: flex;
+  align-items: center;
+  gap: 7.8rem;
+  width: 100%;
+  padding-left: 3.6rem;
+  padding-right: 3.6rem;
+  padding-bottom: 2.8rem;
+  border-bottom: 1px solid rgba(196, 196, 196, 0.3);
+  .informacoes {
+    display: flex;
+    flex-direction: column;
+    h3 {
+      color: #3f3f3f;
+      font-size: 22px;
+      margin-bottom: 3.8rem;
+      transition: all 0.5s ease;
+    }
+    p {
+      font-weight: 300;
+    }
+  }
+  .imagem {
+    width: 100%;
+    max-width: 23rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    img {
+      transition: all 0.5s ease;
+    }
+  }
+  &:hover {
+    h3 {
+      color: #48887b;
+    }
+    .imagem {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+  @include responsive(850px) {
+    gap: 1.8rem;
+    width: 100%;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+  @include responsive(650px) {
+    height: 100%;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 2.8rem;
+    .informacoes {
+      h3 {
+        margin-bottom: 1.8rem;
+      }
+    }
+  }
+}
+
+.card-corpo-clinico {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .foto-do-profissional {
+    width: 100%;
+    max-width: 15.5rem;
+    border-radius: 100%;
+    overflow: hidden;
+    margin-bottom: 1.4rem;
+  }
+  .nome-do-profissional {
+    color: #48887b;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 120%;
+  }
+  .area-medica {
+    color: #7e818a;
+    font-family: "Open Sans";
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 120%; /* 12px */
+    text-transform: uppercase;
+  }
+}

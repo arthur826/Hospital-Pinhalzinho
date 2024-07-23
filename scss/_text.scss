@@ -1,0 +1,53 @@
+p {
+    color: #7E818A;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.links-paginas-header {
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    font-family: "Open Sans";
+    transition: all 0.5s ease;
+    &:hover {
+        color: #c4e5cf;
+    }
+}
+
+.texto-links-de-contato-header {
+    color: #7E818A;
+    font-family: "Open Sans";
+    font-size: 11px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+    &:hover {
+        color: #094F57;
+    }
+}
+
+.links-do-footer {
+    color: #3F3F3F;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 200%; /* 28px */
+    transition: all 0.5s ease;
+    &:hover {
+        color: #094F57;
+    }
+}
+
+.subtitulo {
+    color: #FFF;
+    font-family: "Open Sans";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 120%; /* 14.4px */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
