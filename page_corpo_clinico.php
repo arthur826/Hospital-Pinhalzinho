@@ -10,12 +10,12 @@
             <div class="container">
                 <div class="titulo">
                     <div class="logo-hospital">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/logo-hospital-cruz.svg" alt="">
+                        <img src="<?php the_field("acf_logo_de_fundo_1") ?>" alt="">
                     </div>
                     <h2><?php the_field("acf_titulo_da_secao_inicial_corpo_clinico") ?></h2>
                 </div>
                 <div class="logo-do-centro">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/logo-hospital-cruz-grande.svg" alt="">
+                    <img src="<?php the_field("acf_logo_de_fundo_2") ?>" alt="">
                 </div>
                 <div class="imagem-logo-da-direita">
                     <img src="<?php the_field("acf_imagem_da_secao_inicial_corpo_clinico") ?>" alt="">

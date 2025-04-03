@@ -42,7 +42,7 @@
         </div>
         <div class="bottom">
           <p class="texto-copyright"><?php the_field("acf_texto_de_copyright", "options") ?></p>
-          <a href="#ReturnToTop"><button class="btn-return-to-top"><img src="<?php echo get_template_directory_uri() ?>/Assets/arrow-top.svg" alt=""></button></a>
+          <a href="#ReturnToTop"><button class="btn-return-to-top"><img src="<?php echo get_template_directory_uri() ?>/assets/arrow-top.svg" alt=""></button></a>
           <div class="link-do-dev">
             <a href="<?php the_field("acf_link_do_desenvolvedor", "options") ?>" class="texto-desenvolvedor">Desenvolvido por </a>
             <a href="<?php the_field("acf_link_do_desenvolvedor", "options") ?>"><div class="logo-jpx"><img src="<?php the_field("acf_logo_jotapix", "options") ?>" alt=""></div></a>

@@ -175,7 +175,7 @@
           left: 0;
           width: 100%;
           height: 100%;
-          background: url(./Assets/cross.jpg);
+          background: url(./assets/cross.jpg);
           background-size: 100%;
           background-position: center;
           background-size: cover;
@@ -199,7 +199,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: url(./Assets/cross.jpg);
+        background: url(./assets/cross.jpg);
         background-size: 100%;
         background-position: center;
         background-size: cover;
@@ -228,7 +228,7 @@
           left: 0;
           width: 100%;
           height: 100%;
-          background: url(./Assets/cross.jpg);
+          background: url(./assets/cross.jpg);
           background-size: 100%;
           background-position: center;
           background-size: cover;
@@ -251,7 +251,7 @@
           left: 0;
           width: 100%;
           height: 100%;
-          background: url(./Assets/cross.jpg);
+          background: url(./assets/cross.jpg);
           background-size: 100%;
           background-position: center;
           background-size: cover;
@@ -341,7 +341,7 @@
 .s-especialidades {
   position: relative;
   width: 100%;
-  background: url(./Assets/background-s-especializacoes.jpg), #094f57;
+  background: url(./assets/background-s-especializacoes.jpg), #094f57;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -566,7 +566,7 @@
 .s-corpo-clinico {
   position: relative;
   width: 100%;
-  background: url(./Assets/fundo-s-corpo-clinico.jpg),
+  background: url(./assets/fundo-s-corpo-clinico.jpg),
     linear-gradient(to right, #206b71 50%, #9ad4b6 50%);
   background-repeat: no-repeat;
   background-size: contain;
@@ -952,6 +952,7 @@
 .s-content-noticias {
   padding-top: 9.5rem;
   padding-bottom: 9.5rem;
+  border-bottom: 1px solid #f1f1f1;
   .container {
     .noticias {
       display: flex;
@@ -1026,6 +1027,14 @@
         }
       }
       .post-content {
+        .imagem-da-noticia {
+          width: 100%;
+          margin-bottom: 3rem;
+          img {
+            width: 100%;
+            border-radius: 1rem;
+          }
+        }
         p {
           font-size: 18px;
           margin-bottom: 4rem;
@@ -1066,6 +1075,7 @@
 /*Página Diretoria*/
 
 .s-content-diretoria {
+  width: 100%;
   padding-top: 8.5rem;
   padding-bottom: 10rem;
   .container {
@@ -1089,6 +1099,9 @@
           gap: 5px;
           list-style: circle;
           margin-left: 1.4rem;
+          p {
+            line-height: 130%;
+          }
           span {
             color: #7e818a;
             font-family: "Open Sans";
@@ -1101,17 +1114,35 @@
       .conselho-fiscal {
         margin-bottom: 2.4rem;
         li {
+          p {
+            line-height: 130%;
+          }
           margin-left: 1.4rem;
         }
       }
       .diretora-executiva {
         margin-bottom: 2.4rem;
         li {
+          p {
+            line-height: 130%;
+          }
           margin-left: 1.4rem;
         }
       }
       .acessoria-juridica {
+        margin-bottom: 2.4rem;
         li {
+          p {
+            line-height: 130%;
+          }
+          margin-left: 1.4rem;
+        }
+      }
+      .coordernacao {
+        li {
+          p {
+            line-height: 130%;
+          }
           margin-left: 1.4rem;
         }
       }
@@ -1156,6 +1187,14 @@
             margin-left: 0;
           }
         }
+        .coordernacao {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          li {
+            margin-left: 0;
+          }
+        }
       }
     }
   }
@@ -1164,8 +1203,10 @@
 /*Página de Contato*/
 
 .s-content-contato {
+  width: 100%;
   padding-top: 9.3rem;
   padding-bottom: 7.4rem;
+  border-bottom: 1px solid #f1f1f1;
   .container {
     display: flex;
     gap: 9rem;
@@ -1356,6 +1397,130 @@
         .formulario-de-contato {
           padding-left: 2.5rem;
           padding-right: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+/*Página de Estrutura*/
+
+.s-content-estrutura {
+  width: 100%;
+  padding-top: 8.5rem;
+  padding-bottom: 2.2rem;
+  .container {
+    display: flex;
+    .conteudo {
+      position: relative;
+      width: 100%;
+      max-width: 80%;
+      padding-left: 3.3rem;
+      overflow: hidden;
+      .btn-navegacao {
+        display: none;
+      }
+      h2 {
+        margin-bottom: 4.6rem;
+        margin-left: 3rem;
+      }
+      .cards-de-especialidade {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2.8rem;
+      }
+    }
+  }
+  @include responsive(650px) {
+    padding-top: 0rem;
+    .container {
+      .conteudo {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0rem;
+        .btn-navegacao {
+          display: block;
+          margin-top: 1.2rem;
+          margin-bottom: 2rem;
+          margin-right: 85%;
+        }
+        h2 {
+          margin-left: 0rem;
+          font-size: 26px;
+        }
+        .cards-de-especialidade {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.s-resultados-inicio {
+    width: 100%;
+    padding-top: 16rem;
+    padding-bottom: 9rem;
+    background: linear-gradient(90deg, #094F57 20.53%, #9DD3B3 101.45%);
+    .container {
+      .subtitulo {
+        color: #8ac2a7;
+        margin-bottom: 5px;
+      }
+      h2 {
+        color: white;
+        font-weight: 500;
+      }
+    }
+
+    @include responsive(450px) {
+      padding-top: 10rem;
+      padding-bottom: 8rem;
+      .container {
+        text-align: center;
+      }
+    }
+}
+
+.s-resultados {
+  width: 100%;
+  padding: 8rem 0;
+  .container {
+    h2 {
+      text-align: start;
+      margin-bottom: 30px;
+      font-size: 24px;
+      span {
+        color: #85BEA4;
+      }
+    }
+
+    .results-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+  }
+
+  @include responsive(450px) {
+    .container {
+      h2 {
+        text-align: center;
+      }
+      .results-container {
+        justify-content: center;
+        .card-noticia {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          justify-content: center;
+          a {
+            .bottom {
+              justify-content: center;
+            }
+          }
         }
       }
     }

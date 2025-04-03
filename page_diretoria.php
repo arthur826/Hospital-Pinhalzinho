@@ -10,12 +10,12 @@
             <div class="container">
                 <div class="titulo">
                     <div class="logo-hospital">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/logo-hospital-cruz.svg" alt="">
+                        <img src="<?php the_field('acf_logo_de_fundo_1') ?>" alt="">
                     </div>
                     <h2><?php the_field("acf_titulo_da_secao_inicial_diretoria")?></h2>
                 </div>
                 <div class="logo-do-centro">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/logo-hospital-cruz-grande.svg" alt="">
+                <img src="<?php the_field('acf_logo_de_fundo_2') ?>" alt="">
                 </div>
                 <div class="imagem-logo-da-direita">
                     <img src="<?php the_field("acf_imagem_da_secao_inicial_diretoria")?>" alt="">
@@ -63,6 +63,14 @@
                 <ul class="acessoria-juridica">
                     <h4 class="titulo-areas-da-diretoria"><?php the_field("acf_titulo_da_assessoria_juridica") ?></h4>
                     <?php if( have_rows('acf_repetidor_da_assessoria_juridica') ): while ( have_rows('acf_repetidor_da_assessoria_juridica') ) : the_row(); ?>
+                        <li>
+                            <p><?php the_sub_field("repeate_nome_do_membro") ?></p>
+                        </li>
+                    <?php endwhile; else : endif;?>
+                </ul>
+                <ul class="coordernacao">
+                    <h4 class="titulo-areas-da-diretoria"><?php the_field("acf_titulo_da_coordenacao") ?></h4>
+                    <?php if( have_rows('acf_repetidor_da_coordenacao') ): while ( have_rows('acf_repetidor_da_coordenacao') ) : the_row(); ?>
                         <li>
                             <p><?php the_sub_field("repeate_nome_do_membro") ?></p>
                         </li>

@@ -1,5 +1,5 @@
 <?php
-//Template name: Página Especialidades
+//Template name: Página Galeria
 ?>
 
 <?php get_header(); ?>
@@ -12,13 +12,13 @@
                     <div class="logo-hospital">
                         <img src="<?php the_field('acf_logo_de_fundo_1') ?>" alt="">
                     </div>
-                    <h2><?php the_field('acf_titulo_da_secao_inicial_especialidades') ?></h2>
+                    <h2><?php the_field('acf_titulo_da_secao_inicial_galeria') ?></h2>
                 </div>
                 <div class="logo-do-centro">
                     <img src="<?php the_field('acf_logo_de_fundo_2') ?>" alt="">
                 </div>
                 <div class="imagem-logo-da-direita">
-                    <img src="<?php the_field('acf_imagem_da_secao_inicial_especialidades') ?>" alt="">
+                    <img src="<?php the_field('acf_imagem_da_secao_inicial_galeria') ?>" alt="">
                 </div>
             </div>
             <div class="sobreposicao">
@@ -33,21 +33,9 @@
                 <button class="btn-navegacao" id="js-btn-navegacao">
                     <img src="<?php echo get_template_directory_uri() ?>/assets/icon-navegacao.svg" alt="">
                 </button>
-                <h2 class="titulo-de-navegacao"><?php the_field('acf_titulo_da_secao_de_conteudo_especialidades') ?></h2>
+                <h2 class="titulo-de-navegacao"><?php the_field('acf_titulo_da_sessao_hero_galeria') ?></h2>
                 <div class="cards-de-especialidade">
-                    <?php if (have_rows('acf_repetidor_de_cards_de_especialidades')):
-                            while (have_rows('acf_repetidor_de_cards_de_especialidades')):
-                                the_row(); ?>
-                                    <div class="card-especialidades">
-                                        <div class="informacoes">
-                                            <h3><?php the_sub_field('repeate_nome_da_especialidade') ?></h3>
-                                            <p><?php the_sub_field('repeate_texto_da_especialidade') ?></p>
-                                        </div>
-                                        <div class="imagem">
-                                            <img src="<?php the_sub_field('repeate_imagem_da_especialidade') ?>" alt="">
-                                        </div>
-                                    </div>
-                    <?php endwhile; else: endif; ?>
+                   <?php the_content(); ?>
                 </div>
             </div>
             <?php include (TEMPLATEPATH . '/includes/modulo-navegacao-interno-mobile.php') ?>

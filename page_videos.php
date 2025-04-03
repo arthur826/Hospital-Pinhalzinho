@@ -39,7 +39,7 @@
                             </div>
                             <div class="capa-do-video">
                                 <img class="imagem-do-video" src="<?php the_sub_field("repeate_capa_do_video") ?>" alt="" />
-                                <button class="btn-click-video"><img src="<?php echo get_template_directory_uri() ?>/Assets/icone-click-video.svg" alt=""></button>
+                                <button class="btn-click-video"><img src="<?php echo get_template_directory_uri() ?>/assets/icone-click-video.svg" alt=""></button>
                             </div>
                             <h3><?php the_sub_field("repeate_titulo_do_video") ?></h3>
                             <p><?php the_sub_field("repeate_texto_do_video") ?></p>

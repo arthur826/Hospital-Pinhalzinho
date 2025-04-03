@@ -47,61 +47,56 @@
                 <a target="_blank" href="<?php the_sub_field("repeate_link_da_rede_social", 'options') ?>" class="links-do-footer"><img src="<?php the_sub_field("repeate_logo_da_rede_social", 'options') ?>" alt=""></a>
               <?php endwhile; else : endif;?>
             </div>
-            <div class="logos-redes-sociais">
-              
-            </div>
           </div>
-          <?php
-                $args = array(
-                    'menu' => 'Menu Header Links de Páginas',
-                    'theme_location' => 'menu-header-links-de-paginas',
-                    'container' => false,
-                    'menu_class' => 'links-das-paginas'
-                );
-                wp_nav_menu( $args );
-          ?>
+          <div class="links-paginas">
+            <?php
+                  $args = array(
+                      'menu' => 'Menu Header Links de Páginas',
+                      'theme_location' => 'menu-header-links-de-paginas',
+                      'container' => false,
+                      'menu_class' => 'links-das-paginas'
+                  );
+                  wp_nav_menu( $args );
+            ?>
+            
+            <button class="btn-search" id="searchButton"><img src="<?php echo get_template_directory_uri() ?>/assets/magnifying-glass-solid.svg" alt=""></button>
+          </div>
+          <form action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get" class="input-de-busca">
+              <input type="text" name="s" class="search-input" id="searchInput" placeholder="Buscar...">
+              <button type="submit" id="confirmButton">
+                  <img src="<?php echo get_template_directory_uri() ?>/assets/icon-park_go-end.png" alt="Buscar">
+              </button>
+          </form>
           <button id="btnMenuMobile" class="btn-menu-mobile">
-            <img src="<?php echo get_template_directory_uri() ?>/Assets/menu-mobile.svg" alt="" />
+            <img src="<?php echo get_template_directory_uri() ?>/assets/menu-mobile.svg" alt="" />
           </button>
         </nav>
       </div>
     </header>
+    
 
     <div class="menu-mobile">
       <div class="overlay js-overlay"></div>
       <aside>
         <a href="" class="logo-header">
-          <img src="<?php echo get_template_directory_uri() ?>/Assets/logo-hospital-pinhalzinho.svg" alt="" />
+          <img src="<?php echo get_template_directory_uri() ?>/assets/logo-hospital-pinhalzinho.svg" alt="" />
         </a>
         <nav>
           <div class="links-de-contato-do-header">
-            <a href="" class="link-de-contato">
-              <div class="icone">
-                <img src="<?php echo get_template_directory_uri() ?>/Assets/icone-relogio.svg" alt="" />
-              </div>
-              <p class="texto-links-de-contato-header">Horários de Visita</p>
-            </a>
-            <a href="" class="link-de-contato">
-              <div class="icone">
-                <img src="<?php echo get_template_directory_uri() ?>/Assets/icone-email.svg" alt="" />
-              </div>
-              <p class="texto-links-de-contato-header">OUVIDORIA</p>
-            </a>
-            <a href="" class="link-de-contato">
-              <div class="icone">
-                <img src="<?php echo get_template_directory_uri() ?>/Assets/icone-phone.svg" alt="" />
-              </div>
-              <p class="texto-links-de-contato-header">fale conosco</p>
-            </a>
-            <div class="links-redes-sociais-header">
+            <?php if( have_rows('repetidor_de_links_de_contato_do_cabecalho', 'options') ): while ( have_rows('repetidor_de_links_de_contato_do_cabecalho', 'options') ) : the_row(); ?>
+                <a href="<?php the_sub_field("repeate_link_de_contato_do_cabecalho", "options") ?>" class="link-de-contato">
+                  <div class="icone">
+                    <img src="<?php the_sub_field("repeate_icone_do_link", "options") ?>" alt="" />
+                  </div>
+                  <p class="texto-links-de-contato-header"><?php the_sub_field("repeate_texto_do_links_de_contato_do_cabecalho", "options") ?></p>
+                </a>
+              <?php endwhile; else : endif;?> 
+            <div class="links-redes-sociais">
               <p class="texto-links-de-contato-header">ahbp nas redes</p>
-              <div class="links-redes-sociais">
-                <a href="" class="link-de-contato">
-                  <img src="<?php echo get_template_directory_uri() ?>/Assets/icon-instagram.svg" alt="" />
-                </a>
-                <a href="" class="link-de-contato">
-                  <img src="<?php echo get_template_directory_uri() ?>/Assets/icon-facebook.svg" alt="" />
-                </a>
+              <div class="redes">
+                <?php if( have_rows('repetidor_das_redes_socias', 'options') ): while ( have_rows('repetidor_das_redes_socias', 'options') ) : the_row(); ?>
+                  <a target="_blank" href="<?php the_sub_field("repeate_link_da_rede_social", 'options') ?>" class="link-de-contato"><img src="<?php the_sub_field("repeate_logo_da_rede_social", 'options') ?>" alt=""></a>
+                <?php endwhile; else : endif;?>
               </div>
             </div>
           </div>
@@ -117,4 +112,34 @@
         </nav>
       </aside>
     </div>
+
+    <script>
+      var btnSearchButton = document.getElementById("searchButton");
+      var searchInput = document.getElementById("searchInput");
+      var confirmButton = document.getElementById("confirmButton");
+      var searchForm = document.querySelector(".input-de-busca"); // Seleciona o formulário
+
+      btnSearchButton.addEventListener("click", function(event) {
+          if (!searchInput.classList.contains("active")) {
+              event.preventDefault(); // Evita o envio do formulário
+              searchInput.classList.add("active");
+              confirmButton.classList.add("active");
+              searchInput.focus();
+          } else if (searchInput.value.trim() === "") {
+              event.preventDefault();
+              searchInput.classList.remove("active");
+              confirmButton.classList.remove("active");
+          }
+      });
+
+      // Impede o envio do formulário caso o input esteja vazio
+      searchForm.addEventListener("submit", function(event) {
+          if (searchInput.value.trim() === "") {
+              event.preventDefault(); // Bloqueia o envio do formulário
+              alert("Digite algo antes de buscar!"); // Mensagem opcional para o usuário
+          }
+      });
+  </script>
+
+
 

@@ -1,5 +1,5 @@
 <?php
-//Template name: Página de Contato
+//Template name: Página de Trabalho Conosco
 ?>
 
 <?php get_header(); ?>

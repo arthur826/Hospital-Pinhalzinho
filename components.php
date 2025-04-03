@@ -2,14 +2,14 @@
    <a href="">
     <div class="top">
         <div class="capa-da-noticia">
-            <img src="/Assets/capa-noticia-1.svg" alt="">
+            <img src="/assets/capa-noticia-1.svg" alt="">
         </div>
         <h3>AHBP capacita rede credenciada sobre qualidade do atendimento</h3>
         <p>O período deverá ser marcado pela modernização dos serviços prestados, direcionamento estratégico.</p>
     </div>
     <div class="bottom">
         <div class="icon-relogio">
-            <img src="/Assets/icone-relogio.svg" alt="">
+            <img src="/assets/icone-relogio.svg" alt="">
         </div>
         <p class="text-data">28 de Abril de 2024</p>
     </div>
@@ -19,8 +19,8 @@
 <div class="card-videos-destaque">
     <a href="">
       <div class="capa-do-video">
-        <img class="imagem-do-video" src="/Assets/capa-noticia-3.svg" alt="" />
-        <img src="/Assets/icone-click-video.svg" class="icone-click" alt="">
+        <img class="imagem-do-video" src="/assets/capa-noticia-3.svg" alt="" />
+        <img src="/assets/icone-click-video.svg" class="icone-click" alt="">
       </div>
       <h3>AHBP capacita rede credenciada sobre qualidade do atendimento</h3>
       <p>
@@ -35,7 +35,7 @@
       <div class="top">
         <div class="endereco-e-contato">
             <div class="logo-footer">
-              <img src="/Assets/logo-hospital-pinhalzinho.svg" alt="">
+              <img src="/assets/logo-hospital-pinhalzinho.svg" alt="">
             </div>
             <a href="" class="links-do-footer">(49) 3366-1711</a>
             <a href="" class="links-do-footer">presidente@ahbp.com.br</a>
@@ -60,17 +60,17 @@
         <div class="links-redes-sociais-footer">
           <h4>Siga nossas redes sociais</h4>
           <div class="logos-redes-sociais">
-            <a href="" class="links-do-footer"><img src="/Assets/icon-instagram.svg" alt=""></a>
-            <a href="" class="links-do-footer"><img src="/Assets/icon-facebook.svg" alt=""></a>
+            <a href="" class="links-do-footer"><img src="/assets/icon-instagram.svg" alt=""></a>
+            <a href="" class="links-do-footer"><img src="/assets/icon-facebook.svg" alt=""></a>
           </div>
         </div>
       </div>
       <div class="bottom">
         <p class="texto-copyright">© 2024 Associação Hospitalar Beneficente de Pinhalzinho. Todos os direitos reservados.</p>
-        <button class="btn-return-to-top"><img src="/Assets/arrow-top.svg" alt=""></button>
+        <button class="btn-return-to-top"><img src="/assets/arrow-top.svg" alt=""></button>
         <div class="link-do-dev">
           <p class="texto-desenvolvedor">Desenvolvido por </p>
-          <div class="logo-jpx"><img src="/Assets/logo-jpx.svg" alt=""></div>
+          <div class="logo-jpx"><img src="/assets/logo-jpx.svg" alt=""></div>
         </div>
       </div>
     </div>

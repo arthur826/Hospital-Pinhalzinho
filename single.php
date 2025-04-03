@@ -18,6 +18,9 @@
                         <p class="post-date"><?php the_time('j F, Y'); ?></p>
                     </div>
                     <div class="post-content">
+                        <div class="imagem-da-noticia">
+                            <?php the_post_thumbnail('post-default');?>
+                        </div>
                         <?php the_content(); ?>
                     </div>
                 </div>
